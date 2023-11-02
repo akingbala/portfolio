@@ -126,3 +126,37 @@ h1{
 span{
     color:antiquewhite;
 }
+@media screen and (min-width: 480px) {
+    
+    #leftsidebar {width: 200px; float: left;}
+    #main {margin-left: 216px;}
+  }
+  /* Default styles for your portfolio */
+/* You can customize these styles to your liking */
+
+/* Example: Mobile-first styles */
+body {
+    font-size: 16px;
+  }
+  
+  /* Tablet (768px) and larger */
+  @media screen and (min-width: 768px) {
+    body {
+      font-size: 18px;
+    }
+    /* Add additional tablet styles here */
+  }
+  
+  /* Desktop (1024px) and larger */
+  @media screen and (min-width: 1024px) {
+    body {
+      font-size: 20px;
+    }
+    /* Add additional desktop styles here */
+  }
+  
+  /* Large desktop (1200px) and larger */
+  @media screen and (min-width: 1200px) {
+    /* Add additional large desktop styles here */
+  }
+  
