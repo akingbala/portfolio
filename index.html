@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/download.png">
+    <title>Front-End Web Developer & WordPress Designer</title>
+    <style>
+        /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Define overall layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    margin: 20px;
+}
+
+.grid-item {
+    background-color: pink;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.4;
+}ssss
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+.active{
+    background-color:red;
+}
+.contain{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align:left;
+}
+.typewriter {
+    text-align: center;
+}
+
+#text {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Courier New', monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid orange;
+    animation: typing 2s steps(25, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="contain">
+                <ul>
+                    <li><a href='index.html' class="active">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <br><br>
+                <h1>Portfo<span>Lio</span></h1>
+            </div>
+            <div class="typewriter">
+                <div id="text"></div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.getElementById("text");
+    const textToType = "Welcome to my portfolio.";
+    let i = 0;
+
+    function typeText() {
+        if (i < textToType.length) {
+            textElement.textContent += textToType.charAt(i);
+            i++;
+            setTimeout(typeText, 10);
+        }
+    }
+
+    typeText();
+});
+
+            </script>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Who I Am</h2>
+                    <h1>I'm Caleb Oluwaferanmi</h2>
+    
+                    <p>A passionate Front-End Web Developer and WordPress Designer with a love for all things web-related.</p>
+                </div>
+                <div class="about-skills">
+                    <h3>What I Do</h3>
+                    <p>I specialize in crafting beautiful, user-friendly websites with a strong focus on the front-end. I'm a firm believer that design and functionality should go hand in hand. My expertise lies in:</p>
+                    <ul>
+                        <li>HTML5, CSS3, and JavaScript</li>
+                        <li>Responsive Web Design</li>
+                        <li>WordPress Development</li>
+                        <li>User Experience (UX) Design</li>
+                        <li>Web Performance Optimization</li>
+                    </ul>
+                </div>
+                <div class="about-philosophy">
+                    <h3>My Philosophy</h3>
+                    <p>I'm dedicated to creating web experiences that not only look great but also work flawlessly. I believe in the power of collaboration, effective communication, and continuous learning to stay at the forefront of this dynamic industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+ 
+</body>
+</html>
+<header>
+    <h1>About Me</h1>
+</header>
+
+<section class="grid-container">
+    <div class="grid-item">
+        <h2> I'm [CALEB OLUWAFERANMI]</h2>
+        <p>I'm a passionate front-end developer and WordPress designer with a knack for creating visually appealing and user-friendly websites.</p>
+    </div>
+
+    <div class="grid-item">
+        <h2>What I Do</h2>
+        <p>I specialize in crafting beautiful and functional web experiences using a combination of HTML, CSS, and JavaScript. My skills extend to customizing and optimizing WordPress websites, ensuring they meet the unique needs of my clients.</p>
+    </div>
+
+    <div class="grid-item">
+        <h2>My Approach</h2>
+        <p>I approach each project with a keen eye for design, ensuring that the user interface is not only aesthetically pleasing but also intuitive to navigate. I believe in the power of responsive design, and I implement CSS grid layouts effectively to create seamless and adaptable websites for all devices.</p>
+    </div>
+
+    <div class="grid-item">
+        <h2>Why Work with Me</h2>
+        <p>My commitment to staying up-to-date with the latest web development trends and my passion for creating websites that make a positive impact set me apart. I'm dedicated to turning your vision into reality, and I'm always eager to take on new challenges.</p>
+    </div>
+</section>
+
+<footer>
+    <p>Let's collaborate and create stunning web solutions together.</p>
+    <p>&copy;2023|Caleb|Oluwaferanmi</p>
+</footer>
+
+</body>
+</html>
