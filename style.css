@@ -1,1 +1,128 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Add basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+
+
+section {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    font-size:27px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display:inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f9a825; /* Change the color to your choice */
+}
+
+/* Portfolio item styles */
+.portfolio-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Button and input styles */
+.btn {
+    background-color: #f9a825; /* Change the color to your choice */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Input animation */
+.animated-input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+}
+
+.animated-input:focus {
+    border: 2px solid #f9a825;
+    outline: none;
+}
+
+/* Button animation */
+.animated-btn {
+    background-color: #f9a825; /* Change the color to your choice */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.animated-btn:hover {
+    background-color: #333; /* Change the color to your choice */
+    color: #fff;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+.about-content {
+    justify-content: space-between;
+    display:flex;
+    background-color:pink;
+}
+h1{
+    color:rgb(223, 65, 91);
+}
+span{
+    color:antiquewhite;
+}
