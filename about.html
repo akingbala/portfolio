@@ -1,0 +1,220 @@
+<!doctypehtml>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:skyblue;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:rgb(222, 63, 90);
+            border-radius:10px;
+        }
+
+        .profile-pic {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .content {
+            background-color:#333;
+            padding: 20px;
+            color:white;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .profile-pic {
+                margin: 0 auto;
+            }
+        }
+        .item {
+            text-align: center;
+            background-color:#333;
+            color:white;
+            border-radius:30px;
+        }
+        .itel{
+            text-align:center;
+            background-color:#333;
+            color:white;
+            border-radius:30px;
+        }
+        .logo {
+            max-width: 100px;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .item {
+                text-align: center;
+            }
+        }
+        .navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin-right: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Display the menu icon on small screens */
+    }
+
+    #menu {
+        display: none; /* Hide the menu by default on small screens */
+        font-size:20px;
+    }
+
+    .menu-icon.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    #menu.active {
+        display: flex; /* Display the menu when the menu icon is active */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 0;
+    }
+}
+.active{
+  background-color:aqua;
+}
+.copy{
+    text-align:center;
+    color:whitesmoke;
+}
+.mark{
+    background-color:aqua;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-icon" id="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+      
+      <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </div>
+  <script>// Toggle the menu on clicking the bars icon
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+    </script>
+          <h1>Portfo<span>Lio</span></h1>
+         
+      </header>
+      
+    <div class="container">
+        <div class="profile-pic">
+            <img src="feranmi.jpg" width="260px" alt="Your Profile Picture">
+        </div>
+        <div class="content">
+            <h1>About Me</h1>
+            <p>Hello, I'm <strong><mark class="mark">Caleb Oluwaferanmi</mark>.</strong> I'm a front-end developer and WordPress designer with a passion for creating stunning and user-friendly websites. With a strong background in HTML, CSS, and JavaScript, I craft visually appealing and responsive web solutions that provide an exceptional user experience.</p>
+            <p>I am dedicated to staying updated with the latest web development trends and technologies, and I'm always excited to take on new challenges. Whether it's building custom WordPress themes or optimizing front-end performance, I take pride in delivering high-quality work that meets and exceeds client expectations.</p>
+            <p>Feel free to explore my portfolio to see some of my recent projects. If you'd like to collaborate or discuss a project, please don't hesitate to get in touch with me. I look forward to working with you!</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <img src="html5.svg" alt="Front-End Developer Logo" class="logo">
+            <h2>Front-End Developer</h2>
+            <p>Transforming designs into interactive and user-friendly web experiences using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="itel">
+            <img src="wordpress-simple.svg" alt="WordPress Logo" class="logo">
+            <h2>WordPress Designer</h2>
+            <p>Customizing and optimizing WordPress websites to deliver seamless and captivating content management solutions.</p>
+        </div>
+    </div>
+<footer>
+    <p class='copy'>&copy;2023|CALEB|OLUWAFERANMI</p>
+</footer>
+</body>
+</html>
