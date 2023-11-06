@@ -1,0 +1,111 @@
+body{
+    background-color:mediumturquoise;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    background-color:pink;
+}
+
+.service {
+    background-color:aqua;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: scale(1.24);
+}
+
+@media screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.copy{
+    text-align:center;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin-right: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Display the menu icon on small screens */
+    }
+
+    #menu {
+        display: none; /* Hide the menu by default on small screens */
+        font-size:20px;
+    }
+
+    .menu-icon.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    #menu.active {
+        display: flex; /* Display the menu when the menu icon is active */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 0;
+    }
+}
+.active{
+  background-color:aqua;
+}
+.active{
+background-color:aqua;
+}
