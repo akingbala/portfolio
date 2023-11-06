@@ -1,0 +1,243 @@
+/* Base styles */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+#name{
+    transform: scale(1.05);
+}
+input[type="text"],
+input[type="email"],
+textarea:hover {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color:skyblue;
+    transform: scale(1.05);
+}
+
+button {
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+    }
+}
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-icons li {
+    margin-right: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-form form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form label, .contact-form input, .contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+    /* Adjust styling for small screens here */
+    nav ul {
+        text-align: center;
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+.paul{
+    font-family:italic;
+    font-size:20px;
+}
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin-right: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Display the menu icon on small screens */
+    }
+
+    #menu {
+        display: none; /* Hide the menu by default on small screens */
+        font-size:20px;
+    }
+
+    .menu-icon.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    #menu.active {
+        display: flex; /* Display the menu when the menu icon is active */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 0;
+    }
+}
+.active{
+  background-color:aqua;
+}
+.active{
+background-color:aqua;
+}
+.you{
+    display:grid;
+    background-color:deepskyblue;
+    color:white;
+    border-radius:10px;
+    margin:4px;
+    padding:4px;
+    text-align:left;
+    font-size:12px;
+}
+span{
+    color:rgb(144, 28, 47);
+}
+h1{
+    color:antiquewhite;
+}
+.twitter:hover{
+    transform: scale(1.05);
+}
+.copy{
+    text-align:center;
+    color:deepskyblue;
+}
