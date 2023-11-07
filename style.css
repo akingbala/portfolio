@@ -5,15 +5,19 @@
     box-sizing: border-box;
 }
 
-/* Add basic styling */
+/* Add some basic styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-
-section {
+.section {
     background-color: #fff;
     margin: 20px 0;
     padding: 20px;
@@ -31,7 +35,6 @@ nav {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    font-size:27px;
 }
 
 nav ul {
@@ -39,7 +42,7 @@ nav ul {
 }
 
 nav ul li {
-    display:inline;
+    display: inline;
     margin-right: 20px;
 }
 
@@ -50,7 +53,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #f9a825; /* Change the color to your choice */
+    color: #f9a825;
 }
 
 /* Portfolio item styles */
@@ -69,32 +72,9 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* Button and input styles */
+/* Button styles */
 .btn {
-    background-color: #f9a825; /* Change the color to your choice */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Input animation */
-.animated-input {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    transition: all 0.3s;
-}
-
-.animated-input:focus {
-    border: 2px solid #f9a825;
-    outline: none;
-}
-
-/* Button animation */
-.animated-btn {
-    background-color: #f9a825; /* Change the color to your choice */
+    background-color: #f9a825;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -103,8 +83,8 @@ nav a:hover {
     transition: background-color 0.3s;
 }
 
-.animated-btn:hover {
-    background-color: #333; /* Change the color to your choice */
+.btn:hover {
+    background-color: #333;
     color: #fff;
 }
 
@@ -115,48 +95,216 @@ footer {
     color: #fff;
     padding: 10px 0;
 }
-.about-content {
-    justify-content: space-between;
-    display:flex;
-    background-color:pink;
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+    /* Adjust styling for small screens here */
+    nav ul {
+        text-align: center;
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
-h1{
-    color:rgb(223, 65, 91);
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin-right: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Display the menu icon on small screens */
+    }
+
+    #menu {
+        display: none; /* Hide the menu by default on small screens */
+        font-size:20px;
+    }
+
+    .menu-icon.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    #menu.active {
+        display: flex; /* Display the menu when the menu icon is active */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 0;
+    }
+}
+.active{
+  background-color:aqua;
+}
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    text-align: center;
+    background-color: #3498db;
+    padding: 20px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #3498db;
+    padding: 10px;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+section {
+    text-align: center;
+    padding: 40px;
+}
+
+#about {
+    background-color: #ecf0f1;
+}
+
+#portfolio {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.contact{
+    background-color: #2ecc71;
+   
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+/* CSS Animation */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    animation: stars 10s linear infinite;
+}
+
+@keyframes stars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+/* Base styles */
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 20px;
+    font-family:italic;
+    color:#333;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .intro-text {
+        font-size: 15px;
+    }
 }
 span{
-    color:antiquewhite;
+    color:rgb(160, 11, 36);
 }
-@media screen and (min-width: 480px) {
-    
-    #leftsidebar {width: 200px; float: left;}
-    #main {margin-left: 216px;}
-  }
-  /* Default styles for your portfolio */
-/* You can customize these styles to your liking */
 
-/* Example: Mobile-first styles */
-body {
-    font-size: 16px;
+  .copy{
+    text-align:center;
+    color:whitesmoke;
   }
   
-  /* Tablet (768px) and larger */
-  @media screen and (min-width: 768px) {
-    body {
-      font-size: 18px;
-    }
-    /* Add additional tablet styles here */
-  }
-  
-  /* Desktop (1024px) and larger */
-  @media screen and (min-width: 1024px) {
-    body {
-      font-size: 20px;
-    }
-    /* Add additional desktop styles here */
-  }
-  
-  /* Large desktop (1200px) and larger */
-  @media screen and (min-width: 1200px) {
-    /* Add additional large desktop styles here */
-  }
   
