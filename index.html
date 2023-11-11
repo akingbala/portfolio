@@ -30,12 +30,24 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </div>
-        
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  
+  menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+  });
+  </script>
+        <h1>Portfo<span>Lio</span></h1>
+       
+    </header>
+            
 
 <div id="typed-text"></div>
 
 <script>
-  const textToType = "Welcome to my Portfo<span>Lio</span>!"; // The text you want to type
+  const textToType = "Welcome to my PortfoLio!"; // The text you want to type
   const speed = 100; // Typing speed in milliseconds
 
   const typedTextElement = document.getElementById('typed-text');
@@ -54,18 +66,6 @@
   // Start typing when the page loads
   window.onload = typeText;
 </script>
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-  
-  menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-  });
-  </script>
-        <h1>Portfo<span>Lio</span></h1>
-       
-    </header>
-    
     <section id="about">
       <div class="intro">
         <h1>Front-End Developer & WordPress Designer</h1>
