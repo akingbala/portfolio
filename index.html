@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="download.png">
     <title>Front-End Developer & WordPress Designer</title>
+      <style>
+    #typed-text {
+      overflow: hidden; /* Hide overflow to create a typing effect */
+      white-space: nowrap; /* Prevent text from wrapping */
+      border-right: 2px solid #000; /* Simulate the typing cursor */
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
     <header>
@@ -22,6 +30,30 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </div>
+        
+
+<div id="typed-text"></div>
+
+<script>
+  const textToType = "Hello, World!"; // The text you want to type
+  const speed = 100; // Typing speed in milliseconds
+
+  const typedTextElement = document.getElementById('typed-text');
+
+  let charIndex = 0;
+
+  function typeText() {
+    typedTextElement.textContent += textToType[charIndex];
+    charIndex++;
+
+    if (charIndex < textToType.length) {
+      setTimeout(typeText, speed);
+    }
+  }
+
+  // Start typing when the page loads
+  window.onload = typeText;
+</script>
 <script>
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
